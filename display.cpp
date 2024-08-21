@@ -13,14 +13,15 @@ const ll LINF = 1e18;
 const int MOD = 1e9 + 7;
 
 void solve() {
-    int i=0;
-
-    begin:
-        i=i+1;
-        cout<<i<<" ";
-        if(i<100)
-        goto begin;
-
+    int temp = 660;
+    int b = 660;
+    int a = temp%10;
+   if(b%a == 0)
+   {
+    cout<<"yes";
+   }else{
+    cout<<"no";
+   }
 }
 
 int main() {
