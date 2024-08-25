@@ -111,6 +111,25 @@ void code4(int num)
    cout<<max<<" "<<min;
 }
 
+void code5(int num)
+{
+    long long int ans=1;
+
+    for (int i = num; i > 0 ; i--)
+    {
+        ans= ans * i;
+    }
+    cout<<ans;
+}
+int fact(int num)
+{
+    if(num == 2 || num == 1)
+    {
+        return num;
+    }
+
+    return num*fact(num-1);
+}
 int main()
 {
     //code();
@@ -123,6 +142,11 @@ int main()
     string str = "shubham kumar";
     //code3(str);
     int num = 2354;
-    code4(num);
+    //code4(num);
+
+    int num1=3;
+    //code5(num1);
+
+    cout<<fact(num1);
     return 0;
 }
