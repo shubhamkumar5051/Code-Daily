@@ -36,6 +36,7 @@ int Natural_num2(int num)
    return num + Natural_num2(num-1);
 }
 
+
 int main()
 {
     int num=5;
