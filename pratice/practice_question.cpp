@@ -3,32 +3,78 @@ using namespace std;
 
 int main()
 {
-    int arr[] = {13,2,24,52,20,9};
-    int size = sizeof(arr)/sizeof(arr[0]);
+    int arr[] = {13,2,24,52,20,9,1,998,234,0,-1};
+    int arr1[] = {13,2,24,52,20,9};
+    int count = sizeof(arr)/sizeof(arr[0]);
 
-    for (int i = 1; i < size; i++)
+
+    //selection sort
+    //what we select ? the smallest number and put them at start
+
+    // for (int i = 0; i < count-1; i++)
+    // {
+    //     int min_index = i;
+
+    //     for (int j = i+1; j < count; j++)
+    //     {
+    //         if(arr[j] < arr[min_index])
+    //         {
+    //             min_index = j;
+    //         }
+    //     }
+
+    //     int temp = arr[i];
+    //     arr[i] = arr[min_index];
+    //     arr[min_index] = temp;
+    // }
+
+
+
+
+
+
+    // bubble sort
+    // push the maximum to last by adjacent swaps
+
+    // for (int i = 0; i < count-1; i++)
+    // {
+    //     for (int j = 0; j < count-i-1; j++)
+    //     {
+    //         if(arr[j]>arr[j+1])
+    //         {
+    //             int temp = arr[j];
+    //             arr[j] = arr[j+1];
+    //             arr[j+1] = temp;
+    //         }
+    //     }
+        
+    // }
+    
+
+
+
+    // insertion sort
+    // take every element and put it in correct order
+
+    //int arr2[] = {13,2,24,52,10,9};
+    for (int i = 1; i < count; i++)
     {
-        int temp = arr[i]; // 2 13 24 52 20
-                          // 2 13 24 20 52
-
-        for(int j= i-1; j>=0 ;j--)
-        {
-            if(temp < arr[j]) // 20 < 24
+        int element = arr[i];
+          for (int j = i-1; j >=0 ; j--)
+          {
+            if(arr[j] > element)
             {
-                arr[j+1]= arr[j];
-                arr[j] = temp;
+                arr[j+1] = arr[j];
+                arr[j] = element;
             }
-        }
-
-       
-
-
+          }
+          
     }
-
-     for(auto x : arr)
-        {
+    
+    for(auto x : arr)
+    {
             cout<<x<<" ";
-        }
+    }
     
 
 
